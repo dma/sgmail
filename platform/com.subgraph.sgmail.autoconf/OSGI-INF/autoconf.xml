@@ -4,4 +4,5 @@
    <service>
       <provide interface="com.subgraph.sgmail.autoconf.MailserverAutoconfig"/>
    </service>
+   <reference bind="setModel" cardinality="1..1" interface="com.subgraph.sgmail.database.Model" name="Model" policy="static"/>
 </scr:component>

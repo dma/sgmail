@@ -7,9 +7,12 @@
    </configIni>
 
    <launcherArgs>
-      <programArgs>-consoleLog -console -application com.subgraph.sgmail.ui.sgmail</programArgs>
-      <vmArgs>-Dosgi.console.enable.builtin=true</vmArgs>
-      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
+      <programArgs>-consoleLog -console -application com.subgraph.sgmail.ui.sgmail
+      </programArgs>
+      <vmArgs>-Dosgi.console.enable.builtin=true
+      </vmArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
+      </vmArgsMac>
    </launcherArgs>
 
    <windowImages/>
@@ -41,6 +44,7 @@
       <plugin id="com.subgraph.sgmail.services"/>
       <plugin id="com.subgraph.sgmail.ui"/>
       <plugin id="db4o_osgi"/>
+      <plugin id="dnsjava-2.1.6"/>
       <plugin id="gnu.trove"/>
       <plugin id="javax.json-api"/>
       <plugin id="org.eclipse.core.commands"/>

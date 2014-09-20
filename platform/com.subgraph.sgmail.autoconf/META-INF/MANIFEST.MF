@@ -5,5 +5,8 @@ Bundle-SymbolicName: com.subgraph.sgmail.autoconf
 Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: SUBGRAPH
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Import-Package: com.subgraph.sgmail.autoconf
+Import-Package: com.google.common.net;version="15.0.0",
+ com.subgraph.sgmail.autoconf,
+ com.subgraph.sgmail.database
 Service-Component: OSGI-INF/autoconf.xml
+Require-Bundle: dnsjava-2.1.6;bundle-version="0.0.0"

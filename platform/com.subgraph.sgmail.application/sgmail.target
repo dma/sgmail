@@ -11,6 +11,7 @@
 <plugin id="com.google.guava"/>
 <plugin id="com.google.protobuf.java"/>
 <plugin id="db4o_osgi"/>
+<plugin id="dnsjava-2.1.6"/>
 <plugin id="gnu.trove"/>
 <plugin id="javax.json-api"/>
 <plugin id="org.eclipse.core.commands"/>
