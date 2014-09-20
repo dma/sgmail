@@ -19,8 +19,7 @@ import java.util.logging.Logger;
 
 public class MozillaAutoconfiguration {
 	private final static Logger logger = Logger.getLogger(MozillaAutoconfiguration.class.getName());
-	private final static String MOZILLA_AUTOCONF_URL = "https://live.mozillamessaging.com/autoconfig/v1.1/";
-
+	
 	private final String domain;
     private final AutoconfRetriever retriever;
 	private final List<ServerInformationImpl> incomingServers;
@@ -48,7 +47,7 @@ public class MozillaAutoconfiguration {
             return false;
         }
 	}
-
+	
 	public List<ServerInformationImpl> getIncomingServers() {
 		return incomingServers;
 	}
@@ -81,6 +80,15 @@ public class MozillaAutoconfiguration {
 		return null;
 	}
 	
+	private String retrieveMx() throws FileNotFoundException {
+		final InputStream input = retriever.lookupMX(domain);
+		System.out.println(input);
+		if (input == null) {
+			return null;
+		}
+		return "";
+		
+	}
 	private boolean processDocument(Document document) {
 		incomingServers.addAll(processServers(document, "incomingServer"));
 		outgoingServers.addAll(processServers(document, "outgoingServer"));

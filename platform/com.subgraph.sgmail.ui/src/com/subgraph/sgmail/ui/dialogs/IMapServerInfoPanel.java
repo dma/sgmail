@@ -1,9 +1,13 @@
 package com.subgraph.sgmail.ui.dialogs;
 
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.events.SelectionListener;
 import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Button;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Label;
@@ -19,6 +23,7 @@ public class IMapServerInfoPanel extends Composite {
 	private Label incomingProtocol;
 	private Label incomingHost;
 	private Label smtpHost;
+	private Button manualButton;
 	
 	IMapServerInfoPanel(Composite parent, boolean useTor) {
 		super(parent, SWT.NONE);
@@ -47,6 +52,13 @@ public class IMapServerInfoPanel extends Composite {
 		return outgoingServer;
 	}
 
+	public void setButtonAdapter(SelectionAdapter adapter) {
+
+		/* TODO: I am sure I am doing this wrong.. */
+		
+		manualButton.addSelectionListener(adapter);
+	}
+	
 	public void setServerInfo(ServerInformation incoming, ServerInformation outgoing) {
 		this.incomingServer = incoming;
 		this.outgoingServer = outgoing;
@@ -102,6 +114,11 @@ public class IMapServerInfoPanel extends Composite {
 		incomingProtocol = createLabelPair(parent, "Incoming protocol:");
 		incomingHost = createLabelPair(parent, "Incoming server:");
 		smtpHost = createLabelPair(parent, "SMTP server:");
+		new Label(parent, SWT.NONE);
+		manualButton = new Button(parent, SWT.NONE);
+		manualButton.setText("Manual Configuration");
 		clearServerInfo();
 	}
+
+
 }

@@ -4,4 +4,6 @@ import java.io.InputStream;
 
 public interface AutoconfRetriever {
     InputStream lookupDomain(String domain);
+
+	InputStream lookupMX(String domain);
 }
