@@ -1,0 +1,8 @@
+Fork of Mozilla ISPDB v1.1 from:
+
+https://autoconfig.thunderbird.net/v1.1/
+
+We are using the Mozilla DB data for the client autoconfig. 
+
+Because Subgraph Mail only supports encrypted transports (TLS / STARTTLS), we are forking the 
+database and removing the providers that don't offer this.
