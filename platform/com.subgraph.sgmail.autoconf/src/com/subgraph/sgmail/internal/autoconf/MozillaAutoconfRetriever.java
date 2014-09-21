@@ -11,7 +11,7 @@ public class MozillaAutoconfRetriever implements AutoconfRetriever {
 	
     private final static Logger logger = Logger.getLogger(MozillaAutoconfRetriever.class.getName());    
     
-    private final static String MOZILLA_AUTOCONF_LOCAL_PATH = "/xml/mozilla-ispdb/v1.1/";
+    private final static String MOZILLA_AUTOCONF_LOCAL_PATH = "/xml/ispdb/";
     private final static String MOZILLA_MX_URL = "https://mx.thunderbird.net/dns/mx/";
     
     @Override
